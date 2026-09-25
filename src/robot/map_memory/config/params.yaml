@@ -1,3 +1,6 @@
-# map_memory_node:
-#   ros__parameters:
-    
+map_memory_node:
+  ros__parameters:
+    resolution: 0.1         # m per cell
+    size: 40.0              # the world is walled in at +-15 m, this leaves some margin
+    update_distance: 1.5    # only fuse a new costmap once we've moved this far (m)
+    update_period: 1.0      # how often to check (s)

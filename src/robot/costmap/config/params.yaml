@@ -1,3 +1,8 @@
-# costmap_node:
-#   ros__parameters:
-
+costmap_node:
+  ros__parameters:
+    resolution: 0.1         # m per cell
+    size: 30.0              # side length of the costmap in m, lidar is in the middle
+    # The robot is 2 m long and ~1.4 m wide with the wheels, so 1 m of inflation wasn't enough.
+    # The planner treats anything within ~1 m as a wall and the rest of this as "keep away".
+    inflation_radius: 2.0
+    max_cost: 100

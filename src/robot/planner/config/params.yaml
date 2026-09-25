@@ -1,3 +1,9 @@
-# planner_node:
-#   ros__parameters:
-    
+planner_node:
+  ros__parameters:
+    lethal_cost: 50           # cells at or above this are off limits (~1 m from an obstacle with 2 m inflation)
+    unknown_cost: 10          # unexplored cells are allowed, just slightly less attractive than known free space
+    cost_weight: 3.0          # how hard A* works to stay away from obstacles
+    goal_search_radius: 1.5   # if the goal is too close to something, look this far for a spot we can reach
+    goal_tolerance: 0.5       # m
+    goal_timeout: 120.0       # s before giving up on a goal
+    progress_timeout: 10.0    # s without getting closer before replanning

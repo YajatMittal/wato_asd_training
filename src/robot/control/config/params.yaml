@@ -1,3 +1,8 @@
-# control_node:
-#   ros__parameters:
-    
+control_node:
+  ros__parameters:
+    lookahead_distance: 1.5   # m, a bit longer than usual since the robot itself is 2 m long
+    linear_speed: 0.5         # m/s
+    max_angular_speed: 1.0    # rad/s
+    goal_tolerance: 0.25      # m
+    rotate_threshold: 1.0     # rad, turn on the spot if the lookahead point is further off our heading than this
+    slowdown_radius: 1.5      # m, start slowing down this close to the goal
